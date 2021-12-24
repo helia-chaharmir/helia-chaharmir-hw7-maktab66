@@ -7,6 +7,15 @@ class Media{
         console.log(`name:${this.mediaName},product of year:${this.year} `)
     }
 }
+class Book extends Media{
+     constructor(mediaName,year,author){
+         super(mediaName,year)
+         this.author=author
+     }
+     showInfo(){
+         return `name of author ${this.author}`
+     }    
+}
 class Film extends Media{
     constructor(mediaName,year,typeFilm){
         super(mediaName,year)
@@ -14,21 +23,9 @@ class Film extends Media{
       }
     showInfo(){
         console.log(`kind of film:${this.typeFilm} `)
-
     }
 }
- class Book extends Media{
-     constructor(mediaName,year,author){
-         super(mediaName,year)
-         this.author=author
-        
-       }
-     showInfo(){
-         return `name of author ${this.author}`
 
-     }
-    
- }
 const filmObj = new Film("breakingBad",1990,"action")
 filmObj.print()
 filmObj.showInfo()
